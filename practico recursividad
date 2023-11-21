@@ -1,0 +1,30 @@
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Introduce un número: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (num < 0)
+        {
+            Console.WriteLine("El número no puede ser negativo.");
+        }
+        else
+        {
+            Console.WriteLine("El factorial de " + num + " es: " + Factorial(num));
+        }
+    }
+
+    static long Factorial(int num)
+    {
+        if (num == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return num * Factorial(num - 1);
+        }
+    }
+}
